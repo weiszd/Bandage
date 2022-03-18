@@ -4,7 +4,7 @@
         {
             "label": "Build Main",
             "type": "shell",
-            "command": "mkdir -p build && qmake CONFIG+=debug -o ${workspaceFolder}/build/Makefile Bandage.pro && cd build && make -j 16 -f ${workspaceFolder}/build/Makefile",
+            "command": "mkdir -p build && qmake CONFIG+=debug -o ${workspaceFolder}/build/Makefile Bandage.pro && cd build && make -j $(nproc) -f ${workspaceFolder}/build/Makefile",
             
             "group": {
                 "kind": "build",
